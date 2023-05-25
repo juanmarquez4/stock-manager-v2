@@ -20,3 +20,12 @@ export const QUERY_MATCHUPS = gql`
     }
   }
 `;
+
+export const QUERY_PRODUCTS = gql`
+  query products {
+    product {
+      _id
+      name
+    }
+  }
+`;

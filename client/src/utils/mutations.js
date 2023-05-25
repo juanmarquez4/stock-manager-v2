@@ -21,3 +21,12 @@ export const CREATE_VOTE = gql`
     }
   }
 `;
+
+export const CREATE_PRODUCT = gql`
+ mutation createProduct($_id: String!, $name: String!) {
+  createProduct(_id: $_id, name: $name) {
+    _id
+    name
+  }
+ }
+`;
