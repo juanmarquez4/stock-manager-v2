@@ -21,8 +21,8 @@ export const QUERY_MATCHUPS = gql`
   }
 `;
 
-export const QUERY_PRODUCTS = gql`
-  query products {
+export const QUERY_PRODUCT = gql`
+  query product {
     product {
       _id
       name

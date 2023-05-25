@@ -1,4 +1,4 @@
-const { Tech, Matchup } = require('../models');
+const { Tech, Matchup, Product } = require('../models');
 
 // Create the functions that fulfill the queries defined in `typeDefs.js`
 const resolvers = {
@@ -11,6 +11,9 @@ const resolvers = {
       const params = _id ? { _id } : {};
       return Matchup.find(params);
     },
+    product: async () => {
+      return Product.find({});
+    }
   },
   // Define the functions that will fulfill the mutations
   Mutation: {
@@ -28,6 +31,10 @@ const resolvers = {
         { new: true }
       );
       return vote;
+    },
+    createProduct: async (parent, args) => {
+      const product = await Product.create(args);
+      return product;
     },
   },
 };

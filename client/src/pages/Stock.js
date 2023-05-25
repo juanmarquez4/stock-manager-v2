@@ -1,10 +1,10 @@
 import { useQuery } from "@apollo/client";
-import { QUERY_PRODUCTS } from "../utils/queries";
+import { QUERY_PRODUCT } from "../utils/queries";
 
 import Product from "../components/Products";
 
 const Stock = () => {
-    const { data } = useQuery(QUERY_PRODUCTS);
+    const { data } = useQuery(QUERY_PRODUCT);
 
     const productsList = data?.products || [];
 
