@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import { useQuery, useMutation } from "@apollo/client";
-import { QUERY_PRODUCT } from "../../utils/queries";
-import { CREATE_PRODUCT } from "../../utils/mutations";
+import { QUERY_PRODUCT } from "../utils/queries";
+import { CREATE_PRODUCT } from "../utils/mutations";
 
 
 function Product() {
@@ -42,7 +42,7 @@ function Product() {
 
     return (
         <div className="card bg-white card-rounded w-50">
-            <form className="" onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit}>
                 <label>Select New Product</label>
                 <select name="product" onChange={handleInputChange}>
                     {productList.map((product) => {
@@ -53,6 +53,9 @@ function Product() {
                         );
                     })}
                 </select>
+                <button className="btn btn-danger" type="submit">
+                  Create Product!
+                </button>
             </form>
             {error && <div>Something went wrong...</div>}
         </div>
