@@ -1,0 +1,9 @@
+.navbar {
+    display:flex;
+    justify-content: flex-end;
+
+}
+
+.navbar h2 {
+    padding: 10px;
+}

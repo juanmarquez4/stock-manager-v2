@@ -8,3 +8,14 @@ export const QUERY_PRODUCT = gql`
     }
   }
 `;
+
+export const QUERY_REDWINE = gql`
+query redWine {
+  redWine {
+    wine
+    winery
+    location
+    image
+  }
+}
+`
