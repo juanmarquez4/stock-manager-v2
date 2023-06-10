@@ -9,7 +9,7 @@ function Product() {
     const productList = data?.product || [];
     
     return (
-      <container>
+      <div id="productContainer" className="container">
         <div>
           <h2>List of products:</h2>
           <ul>
@@ -40,7 +40,7 @@ function Product() {
             </button>
           </form>
         </div>
-      </container>
+      </div>
     )
 };
 
